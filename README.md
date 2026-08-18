@@ -96,6 +96,25 @@ If you ever need the stdio proxy instead — for a client that cannot do HTTP MC
 }
 ```
 
+
+## `site/` — Hotel Namenlos website
+
+A complete static website for the Romantik Hotel Namenlos & Fischerwiege in
+Ahrenshoop, built with the skills above: ten German-language pages, one
+hand-written design-token stylesheet, generated SVG scenery instead of stock
+photography, and no build dependency beyond Python 3.
+
+```bash
+cd site
+python3 -m http.server 8000    # then open http://localhost:8000
+python3 tools/build.py         # rebuild the pages after editing tools/pages/*
+python3 tools/make-art.py      # redraw the artwork in assets/img/
+```
+
+See [`site/README.md`](site/README.md) for the page map, how to swap the
+illustrations for real photography, and the list of things that must be filled
+in before it goes live (Impressum details, prices, form endpoint).
+
 ## Updating
 
 The skill files are vendored, not fetched at runtime. To move to a newer

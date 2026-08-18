@@ -1,0 +1,168 @@
+title: Kontakt, Anfrage & Anreise | Hotel Namenlos Ahrenshoop
+description: Anfrageformular, Telefon, E-Mail und Anreise zum Romantik Hotel Namenlos & Fischerwiege, Dorfstraße 44, 18347 Ostseebad Ahrenshoop.
+nav: kontakt.html
+over_hero: true
+
+      <section class="hero hero--compact">
+        <img class="hero__scene" src="assets/img/kopf-kontakt.svg" alt="" width="1600" height="620" fetchpriority="high">
+        <div class="hero__scrim"></div>
+        <div class="hero__inner">
+          <p class="hero__eyebrow">Kontakt</p>
+          <h1>Schreiben Sie uns</h1>
+          <p class="hero__text">
+            Keine Buchungsstrecke, kein Konto: Sie schildern uns Ihren Zeitraum, wir
+            antworten mit einem konkreten Vorschlag.
+          </p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="split split--top">
+            <div id="anfrage">
+              <span class="eyebrow">Anfrage</span>
+              <h2>Ihr Aufenthalt</h2>
+              <p class="lede" style="margin-bottom:2.5rem">
+                Pflichtfelder sind mit einem Sternchen markiert. Wir melden uns in
+                der Regel am selben oder am nächsten Werktag.
+              </p>
+
+              <form class="form" action="mailto:info@hotel-namenlos.de" method="post" enctype="text/plain">
+                <div class="form__row">
+                  <p class="field">
+                    <label class="field__label" for="f-anreise">Anreise *</label>
+                    <input class="field__input" type="date" id="f-anreise" name="anreise" required>
+                  </p>
+                  <p class="field">
+                    <label class="field__label" for="f-abreise">Abreise *</label>
+                    <input class="field__input" type="date" id="f-abreise" name="abreise" required>
+                  </p>
+                </div>
+                <div class="form__row">
+                  <p class="field">
+                    <label class="field__label" for="f-personen">Personen *</label>
+                    <select class="field__input" id="f-personen" name="personen" required>
+                      <option value="1">1 Person</option>
+                      <option value="2" selected>2 Personen</option>
+                      <option value="3">3 Personen</option>
+                      <option value="4">4 Personen</option>
+                      <option value="mehr">Mehr als 4</option>
+                    </select>
+                  </p>
+                  <p class="field">
+                    <label class="field__label" for="f-haus">Wunschhaus</label>
+                    <select class="field__input" id="f-haus" name="haus">
+                      <option value="egal" selected>Keine Präferenz</option>
+                      <option value="namenlos">Haus Namenlos</option>
+                      <option value="fischerwiege">Haus Fischerwiege</option>
+                      <option value="gaestehaus">Gästehaus</option>
+                      <option value="appartement">Ferienwohnung</option>
+                    </select>
+                  </p>
+                </div>
+                <div class="form__row">
+                  <p class="field">
+                    <label class="field__label" for="f-name">Name *</label>
+                    <input class="field__input" type="text" id="f-name" name="name"
+                           autocomplete="name" required>
+                  </p>
+                  <p class="field">
+                    <label class="field__label" for="f-mail">E-Mail *</label>
+                    <input class="field__input" type="email" id="f-mail" name="email"
+                           autocomplete="email" required>
+                  </p>
+                </div>
+                <p class="field">
+                  <label class="field__label" for="f-telefon">Telefon</label>
+                  <input class="field__input" type="tel" id="f-telefon" name="telefon"
+                         autocomplete="tel">
+                </p>
+                <p class="field">
+                  <label class="field__label" for="f-verpflegung">Verpflegung</label>
+                  <select class="field__input" id="f-verpflegung" name="verpflegung">
+                    <option value="fruehstueck" selected>Frühstück</option>
+                    <option value="halbpension">Halbpension</option>
+                    <option value="vollpension">Vollpension</option>
+                    <option value="ohne">Ohne Verpflegung (Ferienwohnung)</option>
+                  </select>
+                </p>
+                <p class="field">
+                  <label class="field__label" for="f-nachricht">Ihre Nachricht</label>
+                  <textarea class="field__input" id="f-nachricht" name="nachricht" rows="5"
+                            placeholder="Anlass, Wünsche, Unverträglichkeiten, Hund …"></textarea>
+                </p>
+                <p class="field field--check">
+                  <input type="checkbox" id="f-datenschutz" name="datenschutz" required>
+                  <label for="f-datenschutz">
+                    Ich habe die <a href="datenschutz.html">Datenschutzhinweise</a>
+                    gelesen und bin mit der Verarbeitung meiner Angaben zur
+                    Bearbeitung dieser Anfrage einverstanden. *
+                  </label>
+                </p>
+                <p><button class="btn btn--block" type="submit">Anfrage senden</button></p>
+                <p class="form__note">
+                  Lieber direkt? <a href="tel:+493822060600">+49&nbsp;38220&nbsp;606&nbsp;0</a>
+                  oder <a href="mailto:info@hotel-namenlos.de">info@hotel-namenlos.de</a>
+                </p>
+              </form>
+            </div>
+
+            <aside>
+              <div class="panel">
+                <h3>Romantik Hotel Namenlos &amp; Fischerwiege</h3>
+                <ul class="contact-list">
+                  <li>
+                    <svg aria-hidden="true" focusable="false"><use href="#i-map-pin"/></svg>
+                    <span>Dorfstraße 44<br>18347 Ostseebad Ahrenshoop<br>Mecklenburg-Vorpommern</span>
+                  </li>
+                  <li>
+                    <svg aria-hidden="true" focusable="false"><use href="#i-phone"/></svg>
+                    <span><a href="tel:+493822060600">+49&nbsp;38220&nbsp;606&nbsp;0</a></span>
+                  </li>
+                  <li>
+                    <svg aria-hidden="true" focusable="false"><use href="#i-mail"/></svg>
+                    <span><a href="mailto:info@hotel-namenlos.de">info@hotel-namenlos.de</a></span>
+                  </li>
+                  <li>
+                    <svg aria-hidden="true" focusable="false"><use href="#i-clock"/></svg>
+                    <span>Rezeption täglich besetzt<br>Anreise ab dem Nachmittag</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="panel" style="margin-top:1.5rem">
+                <h3>Anreise</h3>
+                <table class="info-table">
+                  <caption class="visually-hidden">Anreisemöglichkeiten</caption>
+                  <tbody>
+                    <tr>
+                      <th scope="row">Mit dem Auto</th>
+                      <td>Über die A20, Abfahrt Richtung Ribnitz-Damgarten, dann auf die
+                          Halbinsel Fischland. Tiefgarage am Haus.</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Mit der Bahn</th>
+                      <td>Bis Ribnitz-Damgarten oder Rostock, weiter mit dem Bus über
+                          Wustrow nach Ahrenshoop.</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Vor Ort</th>
+                      <td>Strand, Galerien, Kunstmuseum und Ortsmitte sind zu Fuß
+                          erreichbar — das Auto kann stehen bleiben.</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <p class="notice" style="margin-top:1.5rem">
+                <svg aria-hidden="true" focusable="false"><use href="#i-info"/></svg>
+                <span>
+                  Das Formular öffnet Ihr E-Mail-Programm mit den ausgefüllten Angaben.
+                  Wenn das bei Ihnen nicht funktioniert, schreiben Sie uns einfach
+                  direkt an <a href="mailto:info@hotel-namenlos.de">info@hotel-namenlos.de</a>.
+                </span>
+              </p>
+            </aside>
+          </div>
+        </div>
+      </section>
