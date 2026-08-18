@@ -1,8 +1,10 @@
 # ai
 
-Workspace repository with the **UI/UX Pro Max** design-intelligence skill set installed for Claude Code.
+Workspace repository set up for UI work with Claude Code: the **UI/UX Pro Max**
+design-intelligence skills (local, offline) and the **21st MCP** component
+server (remote, needs an API key).
 
-## What's installed
+## Skills
 
 `.claude/skills/` contains the seven skills that ship with
 [nextlevelbuilder/ui-ux-pro-max-skill](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill)
@@ -46,6 +48,53 @@ python3 .claude/skills/ui-ux-pro-max/scripts/search.py "beauty spa landing page"
 Optional dials for `--design-system`: `--variance 1-10` (centered/minimal →
 bold/asymmetric), `--motion 1-10` (attaches a matching GSAP snippet),
 `--density 1-10` (spacious → dashboard-dense).
+
+## 21st MCP server
+
+`.mcp.json` configures the [21st.dev](https://21st.dev/mcp) MCP server, which
+searches the 21st component catalog and generates UI components. It complements
+the skills above: the skills reason locally about style, color, and layout; the
+MCP server fetches and generates actual component code.
+
+**This needs your own API key before it will connect.** Get one at
+<https://21st.dev/mcp>, then export it so Claude Code can expand it into the
+`x-api-key` header:
+
+```bash
+export TWENTY_FIRST_API_KEY="your-key-here"
+```
+
+Put that in your shell profile (or a local `.envrc` — do not commit the key).
+The config itself holds only the variable reference, so it is safe in version
+control. Verify the connection with `claude mcp list` or `/mcp`; an unset
+variable shows up there as a missing-variable warning.
+
+### A note on `21st-dev/magic-mcp`
+
+The old Magic MCP server (`@21st-dev/magic`) is deprecated. Upstream, that npm
+package is now a thin stdio proxy that forwards to the same
+`https://21st.dev/api/mcp` endpoint configured here, and all API keys issued by
+the retired Magic console were reset. The direct HTTP config above is the
+current, supported setup — one less process to spawn, and no `npx` on every
+session start. The legacy tool names (`21st_magic_component_builder`,
+`21st_magic_component_inspiration`, `21st_magic_component_refiner`,
+`logo_search`) are still accepted and translated server-side; the current names
+are `generate`, `get_inspiration`, `search`, `get_component`, and `search_logo`.
+
+If you ever need the stdio proxy instead — for a client that cannot do HTTP MCP
+— the equivalent entry is:
+
+```json
+{
+  "mcpServers": {
+    "21st": {
+      "command": "npx",
+      "args": ["-y", "@21st-dev/magic@latest"],
+      "env": { "API_KEY_21ST": "${TWENTY_FIRST_API_KEY}" }
+    }
+  }
+}
+```
 
 ## Updating
 
