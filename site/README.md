@@ -52,6 +52,23 @@ the markup that goes inside `<main>`. The header, footer, icon sprite and
 `<head>` come from `tools/build.py` — change them there once and every page
 picks it up.
 
+### One-file preview build
+
+`tools/bundle.py` packs the whole site into a single self-contained HTML file —
+stylesheet and script inlined, all 23 SVGs embedded as data URIs, the ten pages
+present as sections behind a small hash router (`#/zimmer`,
+`#/kontakt/anfrage`). Useful for a preview link, an email attachment, or a USB
+stick.
+
+```bash
+python3 tools/bundle.py             # dist/namenlos-vorschau.html  (~1.5 MB)
+python3 tools/bundle.py --artifact  # same, without the html/head/body skeleton
+```
+
+The bundle carries a standing notice that it is a design draft and not the
+hotel's official website. That notice exists only in the bundle — the
+deployable pages in the repository root are unchanged.
+
 ### Editing the header, footer or navigation
 
 All three live in `tools/build.py` (`NAV`, `BRAND`, `FOOTER`, `SHELL`). Rebuild
