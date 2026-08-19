@@ -1,0 +1,167 @@
+title: Контакти, запит і як дістатися | Hotel Namenlos Аренсгоп
+description: Форма запиту, телефон, електронна пошта та дорога до Romantik Hotel Namenlos & Fischerwiege, Dorfstraße 44, 18347 Ostseebad Ahrenshoop.
+nav: kontakt.html
+over_hero: true
+
+      <section class="hero hero--compact">
+        <img class="hero__scene" src="../assets/img/kopf-kontakt.svg" alt="" width="1600" height="620" fetchpriority="high">
+        <div class="hero__scrim"></div>
+        <div class="hero__inner">
+          <p class="hero__eyebrow">Контакти</p>
+          <h1>Напишіть нам</h1>
+          <p class="hero__text">
+            Ані форми бронювання, ані реєстрації: ви називаєте дати, ми відповідаємо
+            конкретною пропозицією.
+          </p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="split split--top">
+            <div id="anfrage">
+              <span class="eyebrow">Запит</span>
+              <h2>Ваше перебування</h2>
+              <p class="lede" style="margin-bottom:2.5rem">
+                Обов'язкові поля позначені зірочкою. Зазвичай відповідаємо того самого
+                або наступного робочого дня.
+              </p>
+
+              <form class="form" action="mailto:info@hotel-namenlos.de" method="post" enctype="text/plain">
+                <div class="form__row">
+                  <p class="field">
+                    <label class="field__label" for="f-anreise">Заїзд *</label>
+                    <input class="field__input" type="date" id="f-anreise" name="anreise" required>
+                  </p>
+                  <p class="field">
+                    <label class="field__label" for="f-abreise">Виїзд *</label>
+                    <input class="field__input" type="date" id="f-abreise" name="abreise" required>
+                  </p>
+                </div>
+                <div class="form__row">
+                  <p class="field">
+                    <label class="field__label" for="f-personen">Гостей *</label>
+                    <select class="field__input" id="f-personen" name="personen" required>
+                      <option value="1">1 гість</option>
+                      <option value="2" selected>2 гостей</option>
+                      <option value="3">3 гостей</option>
+                      <option value="4">4 гостей</option>
+                      <option value="mehr">Більше ніж 4</option>
+                    </select>
+                  </p>
+                  <p class="field">
+                    <label class="field__label" for="f-haus">Бажаний будинок</label>
+                    <select class="field__input" id="f-haus" name="haus">
+                      <option value="egal" selected>Без переваг</option>
+                      <option value="namenlos">Haus Namenlos</option>
+                      <option value="fischerwiege">Haus Fischerwiege</option>
+                      <option value="gaestehaus">Гостьовий будинок</option>
+                      <option value="appartement">Апартаменти</option>
+                    </select>
+                  </p>
+                </div>
+                <div class="form__row">
+                  <p class="field">
+                    <label class="field__label" for="f-name">Ім'я *</label>
+                    <input class="field__input" type="text" id="f-name" name="name"
+                           autocomplete="name" required>
+                  </p>
+                  <p class="field">
+                    <label class="field__label" for="f-mail">Ел. пошта *</label>
+                    <input class="field__input" type="email" id="f-mail" name="email"
+                           autocomplete="email" required>
+                  </p>
+                </div>
+                <p class="field">
+                  <label class="field__label" for="f-telefon">Телефон</label>
+                  <input class="field__input" type="tel" id="f-telefon" name="telefon"
+                         autocomplete="tel">
+                </p>
+                <p class="field">
+                  <label class="field__label" for="f-verpflegung">Харчування</label>
+                  <select class="field__input" id="f-verpflegung" name="verpflegung">
+                    <option value="fruehstueck" selected>Сніданок</option>
+                    <option value="halbpension">Напівпансіон</option>
+                    <option value="vollpension">Повний пансіон</option>
+                    <option value="ohne">Без харчування (апартаменти)</option>
+                  </select>
+                </p>
+                <p class="field">
+                  <label class="field__label" for="f-nachricht">Ваше повідомлення</label>
+                  <textarea class="field__input" id="f-nachricht" name="nachricht" rows="5"
+                            placeholder="Привід, побажання, непереносимість, собака …"></textarea>
+                </p>
+                <p class="field field--check">
+                  <input type="checkbox" id="f-datenschutz" name="datenschutz" required>
+                  <label for="f-datenschutz">
+                    Я прочитав(ла) <a href="datenschutz.html">повідомлення про приватність</a>
+                    і погоджуюся на обробку моїх даних для відповіді на цей запит. *
+                  </label>
+                </p>
+                <p><button class="btn btn--block" type="submit">Надіслати запит</button></p>
+                <p class="form__note">
+                  Краще напряму? <a href="tel:+493822060600">+49&nbsp;38220&nbsp;606&nbsp;0</a>
+                  або <a href="mailto:info@hotel-namenlos.de">info@hotel-namenlos.de</a>
+                </p>
+              </form>
+            </div>
+
+            <aside>
+              <div class="panel">
+                <h3>Romantik Hotel Namenlos &amp; Fischerwiege</h3>
+                <ul class="contact-list">
+                  <li>
+                    <svg aria-hidden="true" focusable="false"><use href="#i-map-pin"/></svg>
+                    <span>Dorfstraße 44<br>18347 Ostseebad Ahrenshoop<br>Мекленбург-Передня Померанія, Німеччина</span>
+                  </li>
+                  <li>
+                    <svg aria-hidden="true" focusable="false"><use href="#i-phone"/></svg>
+                    <span><a href="tel:+493822060600">+49&nbsp;38220&nbsp;606&nbsp;0</a></span>
+                  </li>
+                  <li>
+                    <svg aria-hidden="true" focusable="false"><use href="#i-mail"/></svg>
+                    <span><a href="mailto:info@hotel-namenlos.de">info@hotel-namenlos.de</a></span>
+                  </li>
+                  <li>
+                    <svg aria-hidden="true" focusable="false"><use href="#i-clock"/></svg>
+                    <span>Рецепція працює щодня<br>Заїзд із пообіддя</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="panel" style="margin-top:1.5rem">
+                <h3>Як дістатися</h3>
+                <table class="info-table">
+                  <caption class="visually-hidden">Способи дістатися до готелю</caption>
+                  <tbody>
+                    <tr>
+                      <th scope="row">Автомобілем</th>
+                      <td>Автобаном A20, з'їзд у бік Рібніц-Дамгартена, далі на півострів
+                          Фішланд. Паркінг при будинку.</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Потягом</th>
+                      <td>До Рібніц-Дамгартена або Ростока, далі автобусом через Вустров
+                          до Аренсгопа.</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">На місці</th>
+                      <td>Пляж, галереї, музей і центр села — усе пішки, авто може
+                          стояти.</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <p class="notice" style="margin-top:1.5rem">
+                <svg aria-hidden="true" focusable="false"><use href="#i-info"/></svg>
+                <span>
+                  Форма відкриває вашу поштову програму із заповненими даними. Якщо у вас
+                  це не спрацьовує, просто напишіть нам на
+                  <a href="mailto:info@hotel-namenlos.de">info@hotel-namenlos.de</a>.
+                </span>
+              </p>
+            </aside>
+          </div>
+        </div>
+      </section>
